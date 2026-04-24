@@ -1,218 +1,167 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NovaNote — Download App</title>
-  <style>
-    :root {
-      --bg: #0b1020;
-      --card: #141b33;
-      --text: #f4f7ff;
-      --muted: #a8b3d1;
-      --accent: #5eead4;
-      --accent-2: #60a5fa;
-    }
 
-    * { box-sizing: border-box; }
-
-    body {
-      margin: 0;
-      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      color: var(--text);
-      background:
-        radial-gradient(circle at 10% 10%, rgba(96,165,250,.22), transparent 30%),
-        radial-gradient(circle at 90% 20%, rgba(94,234,212,.2), transparent 25%),
-        var(--bg);
-      min-height: 100vh;
-    }
-
-    .container {
-      max-width: 1080px;
-      margin: 0 auto;
-      padding: 2rem 1rem 3rem;
-    }
-
-    .hero {
-      text-align: center;
-      padding: 2.5rem 1rem;
-    }
-
-    .badge {
-      display: inline-block;
-      border: 1px solid rgba(255,255,255,.22);
-      padding: .35rem .8rem;
-      border-radius: 999px;
-      color: var(--muted);
-      font-size: .86rem;
-      margin-bottom: 1rem;
-    }
-
-    h1 {
-      margin: .2rem 0 .75rem;
-      font-size: clamp(2rem, 5vw, 3.3rem);
-      line-height: 1.1;
-    }
-
-    .hero p {
-      margin: 0 auto;
-      max-width: 700px;
-      color: var(--muted);
-      font-size: 1.06rem;
-    }
-
-    .grid {
-      margin-top: 2rem;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-      gap: 1rem;
-    }
-
-    .card {
-      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.01));
-      border: 1px solid rgba(255,255,255,.12);
-      border-radius: 16px;
-      padding: 1.1rem;
-      display: flex;
-      flex-direction: column;
-      gap: .65rem;
-      min-height: 220px;
-    }
-
-    .chip {
-      width: fit-content;
-      background: rgba(96, 165, 250, .18);
-      color: #bfdbfe;
-      border-radius: 999px;
-      padding: .28rem .65rem;
-      font-size: .75rem;
-      letter-spacing: .02em;
-    }
-
-    .card h2 {
-      margin: .1rem 0;
-      font-size: 1.15rem;
-    }
-
-    .card p {
-      margin: 0;
-      color: var(--muted);
-      font-size: .95rem;
-      flex-grow: 1;
-    }
-
-    .btn {
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
-      text-align: center;
-      font-weight: 600;
-      padding: .72rem .9rem;
-      text-decoration: none;
-      color: var(--bg);
-      background: linear-gradient(90deg, var(--accent), var(--accent-2));
-      transition: transform .15s ease, filter .2s ease;
-      display: inline-block;
-    }
-
-    .btn:hover {
-      transform: translateY(-1px);
-      filter: brightness(1.06);
-    }
-
-    .newsletter {
-      margin-top: 2rem;
-      background: var(--card);
-      border-radius: 16px;
-      border: 1px solid rgba(255,255,255,.1);
-      padding: 1.2rem;
-      display: grid;
-      gap: .8rem;
-    }
-
-    .newsletter form {
-      display: flex;
-      gap: .6rem;
-      flex-wrap: wrap;
-    }
-
-    input[type="email"] {
-      flex: 1;
-      min-width: 220px;
-      padding: .75rem .8rem;
-      border-radius: 10px;
-      border: 1px solid rgba(255,255,255,.2);
-      background: #0f1730;
-      color: var(--text);
-    }
-
-    footer {
-      margin-top: 1.4rem;
-      text-align: center;
-      color: var(--muted);
-      font-size: .88rem;
-    }
-  </style>
-</head>
-<body>
-  <main class="container">
-    <section class="hero">
-      <span class="badge">New: v3.2 released</span>
-      <h1>Download NovaNote for every device.</h1>
-      <p>Capture ideas, organize tasks, and sync instantly. Choose your platform below to install the latest version.</p>
-    </section>
-
-    <section class="grid" aria-label="download options">
-      <article class="card">
-        <span class="chip">Windows</span>
-        <h2>NovaNote for Windows</h2>
-        <p>Best for desktop productivity, keyboard shortcuts, and offline mode support.</p>
-        <a class="btn" href="page2.html?platform=Windows">Download .exe</a>
-      </article>
-
-      <article class="card">
-        <span class="chip">macOS</span>
-        <h2>NovaNote for macOS</h2>
-        <p>Native Apple Silicon support with dark mode, widgets, and iCloud backup.</p>
-        <a class="btn" href="page2.html?platform=macOS">Download .dmg</a>
-      </article>
-
-      <article class="card">
-        <span class="chip">Android</span>
-        <h2>NovaNote for Android</h2>
-        <p>Fast note capture, lock-screen shortcuts, and home screen quick actions.</p>
-        <a class="btn" href="page2.html?platform=Android">Get on Play Store</a>
-      </article>
-
-      <article class="card">
-        <span class="chip">iOS</span>
-        <h2>NovaNote for iPhone & iPad</h2>
-        <p>Stay in sync with Face ID lock, Siri shortcuts, and native share sheet support.</p>
-        <a class="btn" href="page2.html?platform=iOS">Get on App Store</a>
-      </article>
-    </section>
-
-    <section class="newsletter" aria-label="newsletter">
-      <h2>Get release alerts</h2>
-      <p style="margin:0;color:var(--muted)">Get security updates and new feature announcements by email.</p>
-      <form onsubmit="saveEmail(event)">
-        <input id="email" type="email" placeholder="you@example.com" required>
-        <button class="btn" type="submit">Notify me</button>
-      </form>
-    </section>
-
-    <footer>
-      © 2026 NovaNote • Trusted by 2M+ users
-    </footer>
-  </main>
-
-  <script>
-    function saveEmail(event) {
-      event.preventDefault();
-      const email = document.getElementById('email').value;
-      localStorage.setItem('subscriberEmail', email);
-      window.location.href = 'page2.html?platform=Newsletter';
-    }
-  </script>
-</body>
-</html>
++<!DOCTYPE html>
++<html lang="en">
++<head>
++  <meta charset="UTF-8">
++  <meta name="viewport" content="width=device-width, initial-scale=1.0">
++  <title>NovaNote Downloads</title>
++  <style>
++    :root {
++      --bg: #0a1020;
++      --panel: #121a33;
++      --text: #eef3ff;
++      --muted: #9fb0d6;
++      --line: rgba(255,255,255,.14);
++      --accent: #5eead4;
++      --accent2: #60a5fa;
++    }
++
++    * { box-sizing: border-box; }
++
++    body {
++      margin: 0;
++      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
++      color: var(--text);
++      background:
++        radial-gradient(circle at 20% 5%, rgba(96,165,250,.2), transparent 25%),
++        radial-gradient(circle at 90% 10%, rgba(94,234,212,.16), transparent 23%),
++        var(--bg);
++      min-height: 100vh;
++    }
++
++    .wrap {
++      max-width: 980px;
++      margin: 0 auto;
++      padding: 2rem 1rem 3rem;
++    }
++
++    .hero {
++      text-align: center;
++      margin-bottom: 1.2rem;
++    }
++
++    h1 {
++      margin: 0 0 .5rem;
++      font-size: clamp(2rem, 5vw, 3rem);
++    }
++
++    .hero p {
++      margin: 0 auto;
++      max-width: 740px;
++      color: var(--muted);
++    }
++
++    .tag {
++      display: inline-block;
++      margin-bottom: .8rem;
++      padding: .3rem .7rem;
++      border-radius: 999px;
++      border: 1px solid var(--line);
++      color: var(--muted);
++      font-size: .84rem;
++    }
++
++    .cards {
++      display: grid;
++      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
++      gap: .9rem;
++      margin-top: 1.4rem;
++    }
++
++    .card {
++      border: 1px solid var(--line);
++      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.01));
++      border-radius: 14px;
++      padding: 1rem;
++      display: flex;
++      flex-direction: column;
++      gap: .5rem;
++    }
++
++    .meta {
++      color: var(--muted);
++      font-size: .9rem;
++      margin: 0;
++    }
++
++    .download {
++      margin-top: auto;
++      display: inline-block;
++      text-decoration: none;
++      text-align: center;
++      border-radius: 10px;
++      padding: .7rem .8rem;
++      font-weight: 700;
++      color: #0b1020;
++      background: linear-gradient(90deg, var(--accent), var(--accent2));
++    }
++
++    .panel {
++      margin-top: 1.2rem;
++      border: 1px solid var(--line);
++      border-radius: 14px;
++      background: var(--panel);
++      padding: 1rem;
++    }
++
++    code {
++      display: inline-block;
++      padding: .1rem .35rem;
++      border-radius: 6px;
++      background: rgba(255,255,255,.08);
++      font-size: .85rem;
++    }
++
++    .help {
++      color: var(--muted);
++      font-size: .92rem;
++      margin: .3rem 0 0;
++    }
++  </style>
++</head>
++<body>
++  <main class="wrap">
++    <header class="hero">
++      <span class="tag">NovaNote v3.2.0</span>
++      <h1>Download NovaNote directly</h1>
++      <p>Choose your installer below. Clicking a button starts the file download immediately.</p>
++    </header>
++
++    <section class="cards" aria-label="direct download files">
++      <article class="card">
++        <h2>Windows</h2>
++        <p class="meta">File: <code>NovaNote-3.2.0-Setup.exe</code></p>
++        <p class="meta">Size: 86 MB</p>
++        <a class="download" href="downloads/NovaNote-3.2.0-Setup.exe" download>Download for Windows</a>
++      </article>
++
++      <article class="card">
++        <h2>macOS</h2>
++        <p class="meta">File: <code>NovaNote-3.2.0-macOS.dmg</code></p>
++        <p class="meta">Size: 91 MB</p>
++        <a class="download" href="downloads/NovaNote-3.2.0-macOS.dmg" download>Download for macOS</a>
++      </article>
++
++      <article class="card">
++        <h2>Linux</h2>
++        <p class="meta">File: <code>NovaNote-3.2.0-linux.AppImage</code></p>
++        <p class="meta">Size: 79 MB</p>
++        <a class="download" href="downloads/NovaNote-3.2.0-linux.AppImage" download>Download for Linux</a>
++      </article>
++
++      <article class="card">
++        <h2>Android (APK)</h2>
++        <p class="meta">File: <code>NovaNote-3.2.0.apk</code></p>
++        <p class="meta">Size: 42 MB</p>
++        <a class="download" href="downloads/NovaNote-3.2.0.apk" download>Download APK</a>
++      </article>
++    </section>
++
++    <section class="panel">
++      <h3>Important</h3>
++      <p class="help">Put your real app files in the <code>downloads/</code> folder with these names (or update the links above). These buttons are configured for direct file download.</p>
++      <p class="help">If a download does not start automatically, open the manual page: <a href="page2.html">download help</a>.</p>
++    </section>
++  </main>
++</body>
++</html>
